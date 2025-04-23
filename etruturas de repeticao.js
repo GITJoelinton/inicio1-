@@ -1,12 +1,12 @@
-//contagem regressiva//
-console.log("contagem regressiva de 10 a 0");
-for (let i = 10; i >= 0; i--) {
-    console.log(i);
-}
-console.log("tempo esgotado!");
-
-//tabuada do 5//
-
-for (let i = 0; i <= 10; i++) {
-    console.log("5 x " + i + " = " + 5 * i);
+{
+    let numero =prompt ("digite um numero para ver a tabuada:");
+    numero = parseInt (numero);
+    let i=1;
+    while (i<=10){
+    let resultado = numero * i;
+    console.log (numero + " x " + i + " = " + resultado);
+    i++;
+    }
+    console.log ("tabuada do " + numero + " finalizada!");
+    
 }
