@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+
+    <h2>Calculadora de Soma</h2>
+    
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <br>
+    <button onclick="calcular()">Somar</button>
+    <button onclick="calcular()">Subtrair</button>
+    <br><br>
+    <div id="resultado">Resultado: </div>
+
+    <script>
+        function calcular() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            let resultado
+            let resultado2;
+
+            // Verifica se os valores inseridos são números válidos
+            if (isNaN(num1) || isNaN(num2)) {
+                resultado = "Por favor, insira dois números válidos!";
+            } else {
+                resultado = num1 + num2;
+            }
+
+            // Exibe o resultado na tela
+            document.getElementById("resultado").innerText = "Resultado: " + resultado;
+            // Verifica se os valores inseridos são números válidos
+            if (isNaN(num1) || isNaN(num2)) {
+                resultado2 = "Por favor, insira dois números válidos!";
+            } else {
+                resultado2 = num1 - num2;
+            }
+
+            // Exibe o resultado na tela
+            document.getElementById("resultado").innerText = "Resultado: " + resultado2;
+        }
+        
+    </script>
+
+</body>
+</html>

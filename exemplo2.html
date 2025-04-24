@@ -1,0 +1,18 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa de Nome</title>
+</head>
+<body>
+    <input id="nome" placeholder="Digite um nome">
+    <button onclick="pesquisar()">Pesquisar</button>
+    <div id="resultado"></div>
+    <script>
+        const nomes = ["Alice", "Bruno", "Carlos", "Daniela", "Eduardo"];
+        function pesquisar() {
+            let nome = document.getElementById("nome").value;
+            document.getElementById("resultado").textContent = nomes.includes(nome) ? "Nome encontrado!" : "Nome não encontrado.";
+        }
+    </script>
+</body>
+</html>
