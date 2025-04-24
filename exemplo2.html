@@ -1,18 +1,46 @@
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Pesquisa de Nome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Completa</title>
 </head>
 <body>
-    <input id="nome" placeholder="Digite um nome">
-    <button onclick="pesquisar()">Pesquisar</button>
-    <div id="resultado"></div>
+
+    <h2>Calculadora Completa</h2>
+    
+    <input type="text" id="entrada" placeholder="Digite uma operação (ex: 3 + 5)">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+    <br><br>
+    <div id="resultado">Resultado: </div>
+
     <script>
-        const nomes = ["Alice", "Bruno", "Carlos", "Daniela", "Eduardo"];
-        function pesquisar() {
-            let nome = document.getElementById("nome").value;
-            document.getElementById("resultado").textContent = nomes.includes(nome) ? "Nome encontrado!" : "Nome não encontrado.";
+        function calcular() {
+            const entrada = document.getElementById("entrada").value;
+            let resultado;
+
+            // Verifica se a entrada está vazia
+            if (entrada === "") {
+                resultado = "Por favor, insira uma operação!";
+            } else {
+                // Tenta analisar a entrada e fazer a operação
+                try {
+                    // Avalia a expressão matemática digitada
+                    resultado = eval(entrada);
+                    // Verifica se o resultado é um número
+                    if (isNaN(resultado)) {
+                        resultado = "Erro! Operação inválida.";
+                    }
+                } catch (e) {
+                    resultado = "Erro! Operação inválida.";
+                }
+            }
+
+            // Exibe o resultado na tela
+            document.getElementById("resultado").innerText = "Resultado: " + resultado;
         }
     </script>
+
 </body>
 </html>
