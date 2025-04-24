@@ -41,9 +41,8 @@
             }
 
             // Exibe o resultado na tela
-            document.getElementById("resultado").innerText = "Resultado: " + resultado2;
-        }
-        
+            document.getElementById("resultado").innerHTML = "Resultado: <button onclick='calcular()'>Somar</button>";
+document.getElementById("resultado").innerHTML += "<button onclick='calcular()'>subtrair</button>";
     </script>
 
 </body>
