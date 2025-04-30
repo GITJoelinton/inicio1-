@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de Cliques com Reset</title>
+</head>
+<body>
+    <h1>Contador de Cliques</h1>
+    
+    <button id="botaoClique">Clique aqui</button>
+    <button id="botaoReset">Resetar</button>
+
+    <p id="contador">0 cliques</p>
+    <div id="totalCliquesDiv">Total de cliques: 0</div>
+
+    <script>
+        let contador = 0;
+        let totalCliques = 0;
+
+        const elementoContador = document.getElementById('contador');
+        const elementoTotal = document.getElementById('totalCliquesDiv');
+        const botaoClique = document.getElementById('botaoClique');
+        const botaoReset = document.getElementById('botaoReset');
+
+        function atualizarContador() {
+            elementoContador.textContent = contador + " clique" + (contador !== 1 ? "s" : "");
+        }
+
+        function atualizarTotal() {
+            elementoTotal.textContent = "Total de cliques: " + totalCliques;
+        }
+
+        botaoClique.addEventListener('click', () => {
+            contador++;
+            totalCliques++;
+            atualizarContador();
+            atualizarTotal();
+        });
+
+        botaoReset.addEventListener('click', () => {
+            contador = 0;
+            atualizarContador();
+        });
+
+        atualizarContador();
+        atualizarTotal();
+    </script>
+</body>
+</html>
+<!-- contador de cliques com javascript -

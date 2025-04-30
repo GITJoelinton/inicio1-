@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tela de Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  
+  <div>
+    <label for="username">Usuário:</label>
+    <input type="text" id="username" placeholder="Digite seu usuário">
+  </div>
+  <div>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" placeholder="Digite sua senha">
+  </div>
+  <button onclick="login()">Entrar</button>
+  
+  <div id="resultadoLogin" style="margin-top: 20px;"></div>
+
+  <script>
+    function login() {
+     
+      const usuario = document.getElementById("username").value;
+      const senha = document.getElementById("password").value;
+      
+      
+      const resultado = document.getElementById("resultadoLogin");
+    
+      if (usuario === "admin" && senha === "12345") {
+        resultado.textContent = `Bem-vindo, ${usuario}! Você entrou com sucesso.`;}
+       else 
+        resultado.textContent = "Usuário ou senha inválidos. Tente novamente.";}
+  </script>
+</body>
+</html>
+<!-- div de resultado nao realizado -->
