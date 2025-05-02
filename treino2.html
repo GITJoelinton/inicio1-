@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-    <meta crarset="UFT-8">
+    <meta charset="UTF-8">
     <title> QUEM EU SOU</title>
     </head>
     <body>
     <h1>Joelinton Henrique Canesso Siqueira</h1>
     <p> Sou de Paraiso SC e estou aprendendo programar para me tornar desenvolvedor de software.</p>
-    </body>
+    <button onclick="mostrahobbies()">clique
+     aqui</button>
+    <ul id="hobbies">
+    </ul>
+    <script> function mostrahobbies() {
+       const lista=document.getElementByID("hobbies");
+       lista.innerHTML = `
+  <li>Jogar bola</li>
+  <li>Programar</li>
+  <li>Escutar música</li>
+  `;
+ }
+</script>
+ </body>
 </html>
